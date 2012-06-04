@@ -23,11 +23,11 @@ var cldemo = {
       if (cldemo.commands.hasOwnProperty(command)) {
         // Create a list item with a 'Run it' button and the code that it will, er, execute
         html  = '<li>';
-        html += '<input type="button" id="' + command + '" value="Run" title="Go ahead, drop that log!"> ';
-        html += '<code>';
+        html += '<input type="button" class="btn btn-primary btn-large" id="' + command + '" value="Run" title="Go ahead, drop that log!"> ';
+        html += '<pre>';
         // Omit the wrapping "function () { }" for display
         html += cldemo.commands[command].method.toString().replace(/^function\s\(\)\s\{\s/,'').replace(/\s\}$/,'');
-        html += '</code></li>';
+        html += '</pre></li>';
 
         // Add the list item to the list
         ul.innerHTML += html;
