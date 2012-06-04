@@ -59,7 +59,7 @@ var cldemo = {
   }
 };
 
-cldemo.addEvent(window, 'load', cldemo.setup);
+cldemo.addEvent(window, 'load', cldemo.init);
 
 // Array.forEach polyfill
 // From https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/forEach#Compatibility
