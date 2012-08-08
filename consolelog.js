@@ -6,11 +6,13 @@ if (Function.prototype.bind && (typeof console === 'object' || typeof console ==
     }, Function.prototype.bind);
 }
 
-// log() -- The complete, cross-browser (we don't judge!) console.log wrapper for his or her logging pleasure
-if (!window.log) {
-  window.log = function () {
-    log.history = log.history || [];  // store logs to an array for reference
-    log.history.push(arguments);
+// Modified by Shea Rial <sheatrevor@gmail.com> to add RequireJS AMD
+define(function(){
+
+  // log() -- The complete, cross-browser (we don't judge!) console.log wrapper for his or her logging pleasure
+  var log = function () {
+    this.history = this.history || [];  // store logs to an array for reference
+    this.history.push(arguments);
 
     // Modern browsers
     if (typeof console != 'undefined' && typeof console.log == 'function') {
@@ -49,4 +51,8 @@ if (!window.log) {
       }
     }
   };
-}
+
+  // Return a reference to the log function
+  return log;
+
+});
