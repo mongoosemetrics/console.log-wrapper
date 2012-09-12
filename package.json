@@ -1,0 +1,8 @@
+{
+    "name": "consolelog",
+    "license": "MIT",
+    "author": "Craig Patik (Packaged by Mongoose Metrics, Ltd.)",
+    "url": "http://github.com/cpatik/console.log-wrapper",
+    "version": "0.1",
+    "description": "Console log wrapper supporting stack traces with libstacktrace."
+}
